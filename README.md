@@ -16,7 +16,7 @@ We need to save the response in a variable for later use:
 String option = scan.nextLine();
 ```
 
-If the user selects otion 'a', we follow this logic:
+If the user selects otion 'a', we use the following logic:
 
 ```java
 case "a": 
@@ -38,6 +38,22 @@ case "a":
                     }
                 } else {
                     System.out.println("\nWe don't sell cars under $10,000. Sorry!");
+                }
+                break;
+```
+
+If the user selects option 'b', we use the following logic: 
+
+```java
+case "b": 
+                System.out.println("\nWhat is the value of your car?");
+                int value = scan.nextInt();
+                System.out.println("\nWhat is your selling price?");
+                int sellingPrice = scan.nextInt();
+                if (value > sellingPrice && sellingPrice < 30000) {
+                    System.out.println("\nWe will buy your car. Pleasure doing business with you.");
+                } else {
+                    System.out.println("\nSorry! We're not interested in buying your car.");
                 }
                 break;
 ```
