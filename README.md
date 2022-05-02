@@ -57,3 +57,9 @@ case "b":
                 }
                 break;
 ```
+
+If the user selects something other than options 'a' or 'b', we need to output an error message:
+
+```java
+default: System.out.println("\nThat's an invalid option.");
+```
