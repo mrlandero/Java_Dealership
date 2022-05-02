@@ -8,7 +8,27 @@ public class Dealership {
         System.out.println(" - Select option 'b' to sell a car.");
         String option = scan.nextLine();
         switch (option) {
-            case "a": System.out.println("You chose option " + option); break;
+            case "a": 
+                System.out.println("What is your budget?"); 
+                int budget = scan.nextInt();
+                if (budget >= 10000) {
+                    System.out.println("Great! A Nissan Altima is available.");
+                    System.out.println("\nDo you have insurance? Type 'yes' or 'no'");
+                    scan.nextLine();
+                    String insurance = scan.nextLine();
+                    System.out.println("\nDo you have a valid license? Type 'yes' or 'no'");
+                    String license = scan.nextLine();
+                    System.out.println("\nWhat is your credit score?");
+                    int creditScore = scan.nextInt();
+                    if (insurance.equals("yes") && license.equals("yes") && creditScore >= 660) {
+                        System.out.println("Sold! Pleasure doing business with you.");
+                    } else {
+                        System.out.println("We're sorry! You don't qualify to buy this car.");
+                    }
+                } else {
+                    System.out.println("We don't sell cars under $10,000. Sorry!");
+                }
+                break;
             case "b": System.out.println("You chose option " + option); break;
             default: System.out.println("That's an invalid option.");
         }
