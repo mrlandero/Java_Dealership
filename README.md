@@ -63,3 +63,9 @@ If the user selects something other than options 'a' or 'b', we need to output a
 ```java
 default: System.out.println("\nThat's an invalid option.");
 ```
+
+Finally, we need to close the Scanner instance to prevent data leaks:
+
+```java
+scan.close();
+```
